@@ -1,0 +1,10 @@
+bin/
+obj/
+publicado/
+respaldos/
+llaves-sesion/
+.vs/
+.vscode/
+*.user
+.DS_Store
+.claude/
