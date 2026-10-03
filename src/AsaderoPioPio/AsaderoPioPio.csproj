@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--
+    Asadero Pío Pío · Control de pollos (versión 4.0)
+    Backend C# (ASP.NET Core 8) + PostgreSQL. El frontend (HTML, CSS, JS)
+    vive en wwwroot/ y lo sirve este mismo servidor.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>AsaderoPioPio</RootNamespace>
+    <AssemblyName>AsaderoPioPio</AssemblyName>
+    <Version>4.0.0</Version>
+    <Company>Juan Diego González Marín y Santiago Cardoso Padilla</Company>
+    <Product>Asadero Pío Pío · Control de pollos</Product>
+    <Copyright>© 2026 Juan Diego González Marín y Santiago Cardoso Padilla</Copyright>
+    <InvariantGlobalization>false</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Único paquete externo: el conector oficial de PostgreSQL para .NET -->
+    <PackageReference Include="Npgsql" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Los scripts SQL viajan dentro del ejecutable para crear la base al arrancar -->
+    <EmbeddedResource Include="..\..\database\01_esquema.sql" LogicalName="01_esquema.sql" />
+    <EmbeddedResource Include="..\..\database\02_datos_iniciales.sql" LogicalName="02_datos_iniciales.sql" />
+  </ItemGroup>
+
+</Project>

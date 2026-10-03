@@ -1,0 +1,13 @@
+{
+  "name": "Asadero Pío Pío · Control de pollos",
+  "short_name": "Pío Pío",
+  "description": "Inventario, ventas, caja y equipo del asadero.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#100f0b",
+  "theme_color": "#17130b",
+  "lang": "es",
+  "icons": [
+    { "src": "assets/piopio-logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

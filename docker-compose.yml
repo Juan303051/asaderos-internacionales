@@ -1,0 +1,37 @@
+# Opción Docker: levanta PostgreSQL + el sistema con un solo comando:
+#   docker compose up -d
+# Luego abra http://localhost:5080
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: asadero_pio_pio
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres        # cámbiela para producción
+    volumes:
+      - datos-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d asadero_pio_pio"]
+      interval: 5s
+      retries: 10
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ConnectionStrings__Postgres: "Host=db;Port=5432;Database=asadero_pio_pio;Username=postgres;Password=postgres"
+      AdminInicial__Correo: "admin@piopio.com"
+      AdminInicial__Clave: "PioPio2026*"   # el sistema pedirá cambiarla en el primer ingreso
+      TZ: "America/Bogota"                 # las "ventas de hoy" usan la hora de Colombia
+    ports:
+      - "5080:5080"
+    volumes:
+      - llaves-sesion:/app/llaves-sesion
+
+volumes:
+  datos-postgres:
+  llaves-sesion:

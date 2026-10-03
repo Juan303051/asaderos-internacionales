@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><title>Asadero Pío Pío</title><circle cx="60" cy="60" r="55" fill="#000" stroke="#FFC400" stroke-width="6"/>
+  <g class="pp-llama"><path d="M34 100c-6-10 2-16 4-24 4 8 8 8 10 3 2 7 8 9 12 1 4 8 10 6 12-1 2 5 6 5 10-3 2 8 10 14 4 24z" fill="#ff3b30"/>
+   <path d="M42 100c-3-6 1-10 3-15 3 5 6 4 8 1 2 5 6 6 7 0 2 6 7 5 9 0 2 4 5 3 6-1 2 6 4 10 1 15z" fill="#FFC400"/></g>
+  <g class="pp-pollo">
+   <circle cx="50" cy="27" r="7" fill="#ff3b30"/><circle cx="60" cy="22" r="8.5" fill="#ff3b30"/><circle cx="70" cy="27" r="7" fill="#ff3b30"/>
+   <circle cx="60" cy="54" r="27" fill="#FFC400"/>
+   <path d="M84 50l16 7-16 7z" fill="#ff8a00"/>
+   <ellipse cx="82" cy="70" rx="4" ry="7" fill="#ff3b30"/>
+   <ellipse cx="45" cy="64" rx="10" ry="6.5" transform="rotate(-25 45 64)" fill="#e0a800"/>
+   <circle cx="69" cy="47" r="5" fill="#000"/><circle cx="70.6" cy="45.4" r="1.6" fill="#fff"/>
+  </g></svg>
